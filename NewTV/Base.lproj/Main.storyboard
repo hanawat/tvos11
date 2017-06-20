@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cGV-2d-c3x">
+                                <rect key="frame" x="0.0" y="140" width="1920" height="800"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="800" id="ps3-wM-pdQ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="80" minimumInteritemSpacing="10" id="d49-EB-kIt">
+                                    <size key="itemSize" width="738" height="403"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newCell" id="AcI-IM-ZiT" customClass="NewCell" customModule="NewTV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="199" width="738" height="403"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="738" height="403"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UyI-hI-ddm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="738" height="403"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="UyI-hI-ddm" secondAttribute="bottom" id="Yir-em-hCb"/>
+                                            <constraint firstAttribute="trailing" secondItem="UyI-hI-ddm" secondAttribute="trailing" id="dGs-XP-f79"/>
+                                            <constraint firstItem="UyI-hI-ddm" firstAttribute="top" secondItem="AcI-IM-ZiT" secondAttribute="top" id="p2W-I2-1iB"/>
+                                            <constraint firstItem="UyI-hI-ddm" firstAttribute="leading" secondItem="AcI-IM-ZiT" secondAttribute="leading" id="xY2-tt-t1p"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="UyI-hI-ddm" id="pIK-gw-BPw"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="67x-yt-dgV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zRJ-Sq-TB9"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKJ-fe-sDa">
+                                <rect key="frame" x="88" y="30" width="195" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wKJ-fe-sDa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="88" id="0HJ-Nm-owk"/>
+                            <constraint firstItem="cGV-2d-c3x" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7s7-Re-cae"/>
+                            <constraint firstItem="cGV-2d-c3x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GfH-u9-G6d"/>
+                            <constraint firstAttribute="trailing" secondItem="cGV-2d-c3x" secondAttribute="trailing" id="i2y-cD-6FN"/>
+                            <constraint firstItem="wKJ-fe-sDa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="wlk-xX-EDv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="wKJ-fe-sDa" id="W86-A5-xwW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536" y="107"/>
+        </scene>
+    </scenes>
+</document>
