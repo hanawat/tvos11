@@ -35,22 +35,22 @@ class ViewController: UIViewController {
             self, selector: #selector(focusDidUpdate), name: .UIFocusMovementDidFail, object: nil)
 
         // func contains(_ environment: UIFocusEnvironment) -> Bool
-        print("View " + (view.contains(button) ? "contains Button 🙆" : "does't contains Button 🙅"))
+        // print("View " + (view.contains(button) ? "contains Button 🙆" : "does't contains Button 🙅"))
     }
 
     @objc func focusDidUpdate() {
 
         // var isFocused: Bool { get }
-        print("Button is " + (button.isFocused ? "Focused 😀" : "not Focused 😭"))
+        // print("Button is " + (button.isFocused ? "Focused 😀" : "not Focused 😭"))
 
         // static let UIFocusDidUpdate: NSNotification.Name
-        print("Focus Did Update ⭐️")
+        // print("Focus Did Update ⭐️")
     }
 
     @objc func focusMovementDidFail() {
 
         // static let UIFocusMovementDidFail: NSNotification.Name
-        print("Focus Movement Did Fail 💀")
+        // print("Focus Movement Did Fail 💀")
     }
 }
 
@@ -104,8 +104,7 @@ extension ViewController: UICollectionViewDelegate {
             })
         }
 
-// Before: addCoordinatedAnimations
-//
+//        // Before: addCoordinatedAnimations
 //        coordinator.addCoordinatedAnimations({
 //            if let indexPath = context.nextFocusedIndexPath {
 //
